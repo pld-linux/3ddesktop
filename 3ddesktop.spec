@@ -5,8 +5,9 @@ Version:	0.2.4
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://prdownloads.sourceforge.net/desk3d/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/desk3d/%{name}-%{version}.tar.gz
 URL:		http://desk3d.sourceforge.net/
+BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glut-devel
@@ -14,7 +15,7 @@ BuildRequires:	gtk+-devel
 BuildRequires:	imlib2-devel
 BuildRequires:	kdelibs-devel >= 3.0.3
 BuildRequires:	libstdc++-devel
-BuildRequires:	OpenGL-devel
+Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_noautoreqdep	libGL.so.1 libGLU.so.1
