@@ -1,20 +1,18 @@
 Summary:	An OpenGL virtual desktop switching program
 Summary(pl):	Program prze³±czaj±cy wirtualne pulpity wykorzystuj±cy OpenGL
 Name:		3ddesktop
-Version:	0.2.0
-Release:	0.3
+Version:	0.2.3
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://www.systemtoolbox.com/bard/3ddesktop/dl/%{name}-%{version}.tar.gz
-Patch0:		%{name}-DESTDIR.patch
-Patch1:		%{name}-ac_fix.patch
-Patch2:		%{name}-other_prefix.patch
-URL:		http://www.systemtoolbox.com/bard/3ddesktop/
+Source0:	http://prdownloads.sourceforge.net/desk3d/%{name}-%{version}.tar.gz
+URL:		http://desk3d.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glut-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	imlib2-devel
+BuildRequires:	kdelibs-devel >= 3.0.3
 BuildRequires:	libstdc++-devel
 BuildRequires:	OpenGL-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -41,16 +39,15 @@ ekrany. Dostêpnych jest kilka ró¿nych sposobów wizualizacji.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
 
 %build
 cp -f /usr/share/automake/missing .
 aclocal
 %{__autoconf}
 CPPFLAGS="-I/usr/X11R6/include" ; export CPPFLAGS
-%configure
+%configure \
+	--with-kde-includes="/usr/X11R6/include" \
+	--with-qt-includes="/usr/X11R6/include/qt"
 %{__make} OPT=""
 
 %install
@@ -63,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README TODO
+%doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
 %config(noreplace) %verify(not size md5 mtime) %{_sysconfdir}/*
 %{_datadir}/%{name}
