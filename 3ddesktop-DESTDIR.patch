@@ -1,0 +1,29 @@
+--- ./Makefile.in.orginal	Thu Aug  8 03:31:59 2002
++++ ./Makefile.in	Thu Aug  8 20:50:16 2002
+@@ -35,7 +35,7 @@
+ 
+ CFLAGS = -Wall -I. @CFLAGS@ @imlib2_cflags@
+ #-I/usr/include/kde -I/usr/lib/qt-2.3.0/include 
+-CPPFLAGS = -g -Wall -O2 @X_CFLAGS@ @GL_CFLAGS@ @CPPFLAGS@ @imlib2_cflags@ 
++CPPFLAGS = -g -Wall -O2 @X_CFLAGS@ @GL_CFLAGS@ @CPPFLAGS@ @imlib2_cflags@
+ LDFLAGS = @LDFLAGS@ 
+ LIBS = @LIBS@ @GL_LIBS@ @X_LIBS@ -lXxf86vm @imlib2_libs@
+ INSTALL = install
+@@ -54,11 +54,12 @@
+ all: 3ddeskd 3ddesk
+ 
+ install: all
+-	$(top_srcdir)/mkinstalldirs $(bindir)
+-	$(top_srcdir)/mkinstalldirs $(sharedir)
+-	$(INSTALL) 3ddeskd $(bindir)/3ddeskd
+-	$(INSTALL) 3ddesk $(bindir)/3ddesk
+-	$(INSTALL) digits.bmp 3ddesktop.conf $(sharedir)
++	$(INSTALL) -d $(DESTDIR)$(bindir) $(DESTDIR)$(sharedir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(sharedir)
++	$(INSTALL) 3ddeskd $(DESTDIR)$(bindir)/3ddeskd
++	$(INSTALL) 3ddesk $(DESTDIR)$(bindir)/3ddesk
++	$(INSTALL) digits.bmp 3ddesktop.conf $(DESTDIR)$(sharedir)
+ 
+ uninstall:
+ 	/bin/rm -f $(bindir)/3ddeskd $(bindir)/3ddesk
