@@ -8,6 +8,7 @@ Group:		X11/Applications
 Source0:	http://www.systemtoolbox.com/bard/3ddesktop/dl/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-ac_fix.patch
+Patch2:		%{name}-other_prefix.patch
 URL:		http://www.systemtoolbox.com/bard/3ddesktop/
 BuildRequires:	OpenGL-devel
 BuildRequires:	glut-devel
@@ -41,6 +42,7 @@ ekrany. Dostêpnych jest kilka ró¿nych sposobów wizualizacji.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 cp -f /usr/share/automake/missing .
@@ -48,7 +50,7 @@ aclocal
 %{__autoconf}
 CPPFLAGS="-I/usr/X11R6/include" ; export CPPFLAGS
 %configure
-%{__make}
+%{__make} OPT=""
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -62,4 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
+%config(noreplace) %verify(not size md5 mtime) %{_sysconfdir}/*
 %{_datadir}/%{name}
