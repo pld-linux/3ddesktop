@@ -17,6 +17,7 @@ BuildRequires:	imlib2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
+%define 	_noautoreqdep	libGL.so.1 libGLU.so.1
 
 %description
 3D-Desktop is a GNOME OpenGL program for switching virtual desktops in
@@ -60,3 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
+%{_datadir}/%{name}
