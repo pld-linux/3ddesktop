@@ -42,7 +42,7 @@ ekrany. Dostêpnych jest kilka ró¿nych sposobów wizualizacji.
 
 %build
 cp -f /usr/share/automake/missing .
-aclocal
+%{__aclocal}
 %{__autoconf}
 CPPFLAGS="-I/usr/X11R6/include" ; export CPPFLAGS
 %configure \
