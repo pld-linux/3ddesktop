@@ -47,7 +47,7 @@ cp -f /usr/share/automake/missing .
 %{__autoconf}
 %{__automake}
 CPPFLAGS="-I/usr/X11R6/include" ; export CPPFLAGS
-%configure 
+%configure \
 	--with-kde-includes="/usr/X11R6/include" \
 	--with-qt-includes="/usr/X11R6/include/qt"
 %{__make} OPT=""
