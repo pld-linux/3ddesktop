@@ -22,7 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define 	_noautoreqdep	libGL.so.1 libGLU.so.1
 
 %description
-3D-Desktop is a GNOME OpenGL program for switching virtual desktops in
+3D-Desktop is a KDE OpenGL program for switching virtual desktops in
 a seamless 3-dimensional manner. The current desktop is mapped into a
 fullscreen 3D environment where you may choose other screens. Several
 different visualization modes are available. The transition from
@@ -33,7 +33,7 @@ desktops allowing you to select another. The best way to understand is
 to try it out and get the full effect!
 
 %description -l pl
-3D-Desktop jest programem GNOME wykorzystuj±cym OpenGL, który prze³±cza
+3D-Desktop jest programem KDE wykorzystuj±cym OpenGL, który prze³±cza
 wirtualne pulpity w p³ynny, trójwymiarowy sposób. Aktualny pulpit jest
 mapowany na pe³noekranowe ¶rodowisko 3D, gdzie mo¿esz wybraæ inne
 ekrany. Dostêpnych jest kilka ró¿nych sposobów wizualizacji.
