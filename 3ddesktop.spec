@@ -17,7 +17,6 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	OpenGL-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 %define 	_noautoreqdep	libGL.so.1 libGLU.so.1
 
 %description
