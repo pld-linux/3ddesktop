@@ -10,6 +10,7 @@ Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-ac_fix.patch
 URL:		http://www.systemtoolbox.com/bard/3ddesktop/
 BuildRequires:	OpenGL-devel
+BuildRequires:	glut-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
