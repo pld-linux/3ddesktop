@@ -13,6 +13,7 @@ BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
+BuildRequires:	imlib2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -40,8 +41,10 @@ ekrany. Dostêpnych jest kilka ró¿nych sposobów wizualizacji.
 %patch1 -p1
 
 %build
+cp -f /usr/share/automake/missing .
 aclocal
 %{__autoconf}
+CPPFLAGS="-I/usr/X11R6/include" ; export CPPFLAGS
 %configure
 %{__make}
 
