@@ -10,12 +10,13 @@ Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-ac_fix.patch
 Patch2:		%{name}-other_prefix.patch
 URL:		http://www.systemtoolbox.com/bard/3ddesktop/
-BuildRequires:	OpenGL-devel
-BuildRequires:	glut-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	glut-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	imlib2-devel
+BuildRequires:	libstdc++-devel
+BuildRequires:	OpenGL-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
