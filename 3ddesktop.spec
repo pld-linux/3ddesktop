@@ -1,5 +1,5 @@
 Summary:	An OpenGL virtual desktop switching program
-Summary(pl):	Program prze³±czaj±cy virtualne desktopy w OpenGL
+Summary(pl):	Program prze³±czaj±cy wirtualne pulpity wykorzystuj±cy OpenGL
 Name:		3ddesktop
 Version:	0.2.0
 Release:	0.3
@@ -27,6 +27,12 @@ words when the pager activates you see your current desktop appear to
 zoom out to a point in space where you can see your other virtual
 desktops allowing you to select another. The best way to understand is
 to try it out and get the full effect!
+
+%description -l pl
+3D-Desktop jest programem GNOME wykorzystuj±cym OpenGL, który prze³±cza
+wirtualne pulpity w p³ynny, trójwymiarowy sposób. Aktualny pulpit jest
+mapowany na pe³noekranowe ¶rodowisko 3D, gdzie mo¿esz wybraæ inne
+ekrany. Dostêpnych jest kilka ró¿nych sposobów wizualizacji.
 
 %prep
 %setup -q
