@@ -2,13 +2,16 @@ Summary:	An OpenGL virtual desktop switching program
 Summary(pl):	Program prze³±czaj±cy virtualne desktopy w OpenGL
 Name:		3ddesktop
 Version:	0.2.0
-Release:	0.2
+Release:	0.3
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.systemtoolbox.com/bard/3ddesktop/dl/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
+Patch1:		%{name}-ac_fix.patch
 URL:		http://www.systemtoolbox.com/bard/3ddesktop/
 BuildRequires:	OpenGL-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -28,6 +31,7 @@ to try it out and get the full effect!
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 aclocal
