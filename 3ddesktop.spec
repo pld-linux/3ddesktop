@@ -16,6 +16,7 @@ BuildRequires:	gtk+-devel
 BuildRequires:	imlib2-devel
 BuildRequires:	kdelibs-devel >= 3.0.3
 BuildRequires:	libstdc++-devel
+BuildRequires:	qt-devel
 Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
