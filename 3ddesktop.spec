@@ -1,12 +1,12 @@
 Summary:	An OpenGL virtual desktop switching program
 Summary(pl):	Program prze³±czaj±cy wirtualne pulpity wykorzystuj±cy OpenGL
 Name:		3ddesktop
-Version:	0.2.5
+Version:	0.2.6
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-#Source0-md5:	afecac14b6d432e757e37085d4bc8549
 Source0:	http://dl.sourceforge.net/desk3d/%{name}-%{version}.tar.gz
+#Source0-md5:   ef3241a9265f21de938c7a8dc8c7b7cd
 URL:		http://desk3d.sourceforge.net/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
