@@ -7,6 +7,7 @@ License:	GPL v2
 Group:		X11/Applications
 #Source0-md5:	afecac14b6d432e757e37085d4bc8549
 Source0:	http://dl.sourceforge.net/desk3d/%{name}-%{version}.tar.gz
+# Source0-md5: 
 URL:		http://desk3d.sourceforge.net/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
