@@ -1,7 +1,7 @@
 Summary:	An OpenGL virtual desktop switching program
 Summary(pl):	Program prze³±czaj±cy wirtualne pulpity wykorzystuj±cy OpenGL
 Name:		3ddesktop
-Version:	0.2.4
+Version:	0.2.5
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
@@ -46,10 +46,9 @@ cp -f /usr/share/automake/missing .
 %{__autoheader}
 %{__autoconf}
 %{__automake}
-CPPFLAGS="-I/usr/X11R6/include" ; export CPPFLAGS
 %configure \
-	--with-kde-includes="/usr/X11R6/include" \
-	--with-qt-includes="/usr/X11R6/include/qt"
+	--with-kde-includes="/usr/include" \
+	--with-qt-includes="/usr/include/qt"
 %{__make} OPT=""
 
 %install
