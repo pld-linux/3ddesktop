@@ -23,8 +23,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define 	_noautoreqdep	libGL.so.1 libGLU.so.1
 
 %description
-3D-Desktop is a KDE OpenGL program for switching virtual desktops in
-a seamless 3-dimensional manner. The current desktop is mapped into a
+3D-Desktop is a KDE OpenGL program for switching virtual desktops in a
+seamless 3-dimensional manner. The current desktop is mapped into a
 fullscreen 3D environment where you may choose other screens. Several
 different visualization modes are available. The transition from
 working desktop to fullscreen 3D environment is seamless. In other
@@ -66,6 +66,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
-%config(noreplace) %verify(not size md5 mtime) %{_sysconfdir}/*
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
 %{_datadir}/%{name}
 %{_mandir}/man1/3ddesk*
