@@ -1,5 +1,5 @@
 Summary:	An OpenGL virtual desktop switching program
-Summary(pl.UTF-8):   Program przełączający wirtualne pulpity wykorzystujący OpenGL
+Summary(pl.UTF-8):	Program przełączający wirtualne pulpity wykorzystujący OpenGL
 Name:		3ddesktop
 Version:	0.2.9
 Release:	0.1
