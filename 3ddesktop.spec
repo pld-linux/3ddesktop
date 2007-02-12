@@ -1,5 +1,5 @@
 Summary:	An OpenGL virtual desktop switching program
-Summary(pl):	Program prze³±czaj±cy wirtualne pulpity wykorzystuj±cy OpenGL
+Summary(pl.UTF-8):   Program przeÅ‚Ä…czajÄ…cy wirtualne pulpity wykorzystujÄ…cy OpenGL
 Name:		3ddesktop
 Version:	0.2.9
 Release:	0.1
@@ -33,11 +33,11 @@ zoom out to a point in space where you can see your other virtual
 desktops allowing you to select another. The best way to understand is
 to try it out and get the full effect!
 
-%description -l pl
-3D-Desktop jest programem KDE wykorzystuj±cym OpenGL, który prze³±cza
-wirtualne pulpity w p³ynny, trójwymiarowy sposób. Aktualny pulpit jest
-mapowany na pe³noekranowe ¶rodowisko 3D, gdzie mo¿esz wybraæ inne
-ekrany. Dostêpnych jest kilka ró¿nych sposobów wizualizacji.
+%description -l pl.UTF-8
+3D-Desktop jest programem KDE wykorzystujÄ…cym OpenGL, ktÃ³ry przeÅ‚Ä…cza
+wirtualne pulpity w pÅ‚ynny, trÃ³jwymiarowy sposÃ³b. Aktualny pulpit jest
+mapowany na peÅ‚noekranowe Å›rodowisko 3D, gdzie moÅ¼esz wybraÄ‡ inne
+ekrany. DostÄ™pnych jest kilka rÃ³Å¼nych sposobÃ³w wizualizacji.
 
 %prep
 %setup -q
